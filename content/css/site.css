@@ -14,6 +14,7 @@ color:
   quiet:       "#666"
   alt:         "#666"
   green:       "#A7D285"
+  blue:        "#D0E3F1"
 ---
 
 body {
@@ -119,7 +120,7 @@ ul#gene-nav li a {
 }
 
 .blue {
-  background-color: #D0E3F1;
+  background-color: <%= @page.color['blue'] %>;
 }
 
 .green {
@@ -233,6 +234,35 @@ input.text, select.text {
 }
 
 .cancer-box a:hover {
+  text-decoration: underline;
+}
+
+.center {
+  width: 90%;
+  text-align:center;
+  margin:auto;
+}
+
+.gene-box {
+  float: left;
+/*  padding: 20px;*/
+  margin: 20px;
+  text-align: center;
+}
+
+.gene-box a {
+  background-color: <%= @page.color['blue'] %>;
+  display:block;
+  line-height:70px;
+  height:70px;
+  font-size: 140%;
+  text-decoration: none;
+  color: #000000;
+  padding:0 20px 0 20px;
+  margin:0pt;
+}
+
+.gene-box a:hover {
   text-decoration: underline;
 }
 

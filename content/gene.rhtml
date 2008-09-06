@@ -28,6 +28,10 @@ filter:
           Interactions
         </a>
     </li>    
+    <li><a href="javascript:;" onclick="Effect.ScrollTo('pathways'); return false;">
+          Pathways
+        </a>
+    </li>
     
   </ul>
   <div class="clearbox">
@@ -52,4 +56,17 @@ filter:
     <% end  %>
   </div>
   <h2 id="interactions">Interactions</h2>
+  <h3>Top Interactions</h3>
+  <% %w(SERPINA2 E2F1 AR EREG MYC TMEM37 TCEAL1 PAG1).each do |gene| %>
+    <div class="gene-box">
+      <%= link_to gene %>
+    </div>
+  <% end %>
+  <div class="clearbox">
+    
+  </div>
+  <h2 id="pathways">Pathways</h2>
+  <div class="center">
+    <iframe src="http://www.maplib.net/fullmap.php?id=2386&lat=-52.75541210602274&lng=35.775604248046875&z=10" scrolling="no" frameborder="0" style="width:400px;height:400px;border:0px"></iframe>
+  </div>
 </div>
