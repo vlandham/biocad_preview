@@ -1,0 +1,57 @@
+---
+extension: html
+filter:    erb
+---
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <title><%= @page.title %></title>
+   <meta name="author" content="<%= @page.author %>" />
+
+   <!--- Blueprint CSS Framework -->
+   <link rel="stylesheet" href="/css/blueprint/screen.css" type="text/css" media="screen, projection" />
+   <link rel="stylesheet" href="/css/blueprint/print.css" type="text/css" media="print" />
+
+   <!-- CodeRay syntax highlighting CSS -->
+   <link rel="stylesheet" href="/css/coderay.css" type="text/css" />
+
+   <!-- Homepage CSS -->
+   <link rel="stylesheet" href="/css/site.css" type="text/css" media="screen, projection" />
+   
+   <script type="text/javascript" src="/script/niftycube.js"></script>
+   <script type="text/javascript">
+   window.onload=function(){
+   Nifty("div.search,div.cancer-box a,div.cancer-box a:hover","big");
+   }
+   </script>
+   
+</head>
+<body>
+
+<div class="container">
+
+   <div class="column span-20 prepend-2 append-2 first last" id="header">
+     <p class="title">KU BioCAD</p>
+   </div>
+  <ul id="nav">
+    <li><%= link_to "Home" %></li>
+    <li><%= link_to "About" %></li>
+    <li><%= link_to "Genes" %></li>
+    <li><%= link_to "Cancers" %></li>
+    <li><%= link_to "Admin" %></li>
+  </ul>
+
+   <div class="column span-20 prepend-2 append-2 first last">
+      <%= @content %>
+   </div>
+
+   <div class="column span-20 prepend-2 append-2 first last" id="footer">
+ 
+   </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+---
+title:      Search
+created_at: 2008-09-05 19:11:14.967037 -05:00
+extension: html
+filter:
+  - erb
+---
+<h2>Search</h2>
+<div class="search blue left">
+  <div class="site">
+    <form>
+      <div class="label">
+        Search by <strong>Gene</strong>
+      </div> 
+        <input type="text" name="q" value="" class="text">
+        <input type="image" src="/img/search.png" alt="search" />
+    </form>
+  </div>
+</div>
+
+<div class="search green left">
+  <div class="site">
+    <form>
+      <div class="label">
+        Search by <strong>Cancer</strong>
+      </div>
+        <select type="text" name="q" value="" class="text">
+          <option value="prostate">prostate</option>
+          <option value="lymphoma">lymphoma</option>
+          <option value="breast">breast</option>
+          <option value="colon">colon</option>
+          <option value="skin">skin</option>
+          <option value="other">other</option>
+        </select>
+        <input type="image" src="/img/search.png" alt="search" />
+    </form>
+  </div>
+</div>
+
+<div class="clearbox">
+  
+</div>
+
+<h2>Browse by cancer</h2>
+<div class="center">
+<% %w(prostate lymphoma breast colon skin renal pancreatic thyroid lung bladder leukemia other).each do |cancer| %>
+  <div class="cancer-box">
+    <%= link_to cancer %>
+  </div>
+<% end  %>
+</div>
