@@ -32,7 +32,14 @@ filter:
           Pathways
         </a>
     </li>
-    
+    <li><a href="javascript:;" onclick="Effect.ScrollTo('microarray'); return false;">
+          Microarrays
+        </a>
+    </li>
+    <li><a href="javascript:;" onclick="Effect.ScrollTo('transcriptions'); return false;">
+          Transcription Factors
+        </a>
+    </li>
   </ul>
   <div class="clearbox">
     
@@ -65,8 +72,33 @@ filter:
   <div class="clearbox">
     
   </div>
+  <h3>Interaction Map</h3>
+  <div class="clearbox">
+    
+  </div>
   <h2 id="pathways">Pathways</h2>
   <div class="center">
-    <iframe src="http://www.maplib.net/fullmap.php?id=2386&lat=-52.75541210602274&lng=35.775604248046875&z=10" scrolling="no" frameborder="0" style="width:400px;height:400px;border:0px"></iframe>
+    <% %w(pathway1 pathway2 pathway3 pathway4 pathway5).each do |path| %>
+      <div class="cancer-box">
+        <a href="javascript:;" onclick="Effect.ScrollTo('path-map'); return false;">
+              <%= path %>
+            </a>
+      </div>
+    <% end  %>
   </div>
+  <div class="clearbox">
+    
+  </div>
+  <h3>Map</h3>
+  <div class="center">
+    <div id="path-map">
+      <iframe src="http://www.maplib.net/fullmap.php?id=2386&lat=-52.75541210602274&lng=35.775604248046875&z=10" scrolling="no" frameborder="0" style="width:400px;height:400px;border:0px"></iframe>
+    </div>
+  </div>
+  <div class="clearbox">
+    
+  </div>
+  <h2 id="microarray">Microarrays</h2>
+  <h3>Statistics</h3>
+  <h3>Downloads</h3>
 </div>
