@@ -21,11 +21,16 @@ filter:    erb
    <!-- Homepage CSS -->
    <link rel="stylesheet" href="/css/site.css" type="text/css" media="screen, projection" />
    
+   <script type="text/javascript" src="/script/prototype.js"></script>
+   <script type="text/javascript" src="/script/scriptaculous.js"></script>
+   
    <script type="text/javascript" src="/script/niftycube.js"></script>
+   
    <script type="text/javascript">
    window.onload=function(){
    Nifty("div.search,div.cancer-box a,div.cancer-box a:hover","big");
    }
+   
    </script>
    
 </head>
@@ -37,9 +42,9 @@ filter:    erb
      <p class="title">KU BioCAD</p>
    </div>
   <ul id="nav">
-    <li><%= link_to "Home" %></li>
+    <li><%= link_to "Home", 'search.html' %></li>
     <li><%= link_to "About" %></li>
-    <li><%= link_to "Genes" %></li>
+    <li><%= link_to "Genes", 'gene.html' %></li>
     <li><%= link_to "Cancers" %></li>
     <li><%= link_to "Admin" %></li>
   </ul>

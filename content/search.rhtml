@@ -24,15 +24,8 @@ filter:
       <div class="label">
         Search by <strong>Cancer</strong>
       </div>
-        <select type="text" name="q" value="" class="text">
-          <option value="prostate">prostate</option>
-          <option value="lymphoma">lymphoma</option>
-          <option value="breast">breast</option>
-          <option value="colon">colon</option>
-          <option value="skin">skin</option>
-          <option value="other">other</option>
-        </select>
-        <input type="image" src="/img/search.png" alt="search" />
+      <input type="text" name="q" value="" class="text">
+      <input type="image" src="/img/search.png" alt="search" />
     </form>
   </div>
 </div>
@@ -41,9 +34,9 @@ filter:
   
 </div>
 
-<h2>Browse by cancer</h2>
+<h2>Popular cancer types</h2>
 <div class="center">
-<% %w(prostate lymphoma breast colon skin renal pancreatic thyroid lung bladder leukemia other).each do |cancer| %>
+<% %w(prostate lymphoma breast colon skin).each do |cancer| %>
   <div class="cancer-box">
     <%= link_to cancer %>
   </div>

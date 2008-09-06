@@ -13,6 +13,7 @@ color:
   highlight:   "#B2CCFF"
   quiet:       "#666"
   alt:         "#666"
+  green:       "#A7D285"
 ---
 
 body {
@@ -44,7 +45,7 @@ hr {
 ul#nav {
   list-style:none;
   position:absolute;
-  left:605px;
+  left:580px;
   top:30px;
   height:32px;
   margin:0;
@@ -67,6 +68,30 @@ ul#nav li a {
 }
 ul#nav li a:hover {
   background-color:#dcdcdc;
+}
+
+
+/*----*/
+
+ul#gene-nav {
+   list-style:none;
+   clear:both;
+   width: 50%;
+}
+ul#gene-nav li {
+  float:left;
+  height:32px;
+  line-height:32px;
+  margin-right:1px;
+}
+ul#gene-nav li a {
+  display:block;
+  float:left;
+  line-height:32px;
+  height:32px;
+  color:#777777;
+  text-decoration: none;
+  padding:0 25px 0 20px;
 }
 
 .clearbox {
@@ -98,7 +123,7 @@ ul#nav li a:hover {
 }
 
 .green {
-  background-color: #A7D285;
+  background-color: <%= @page.color['green'] %>;
   margin-left: 30px;
 }
 
@@ -196,7 +221,7 @@ input.text, select.text {
 }
 
 .cancer-box a {
-  background-color: #d5d5d5;
+  background-color: <%= @page.color['green'] %>;
   display:block;
   line-height:70px;
   height:70px;
@@ -209,6 +234,14 @@ input.text, select.text {
 
 .cancer-box a:hover {
   text-decoration: underline;
+}
+
+.content {
+  margin-left: 15px;
+}
+
+.content p {
+  margin-left: 25px;
 }
 
 /* Tables

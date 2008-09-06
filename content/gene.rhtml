@@ -1,0 +1,55 @@
+---
+title:      Gene
+created_at: 2008-09-05 22:07:07.666569 -05:00
+filter:
+  - erb
+---
+
+<% gene = Hash.new
+   gene[:name] = "BRCA1"
+   gene[:full] = "breast cancer 1, early onset"
+   gene[:aka] = "IRIS; PSCP; BRCAI; BRCC1; RNF53"
+   gene[:summary] = "This gene encodes a nuclear phosphoprotein that plays a role in maintaining genomic stability and acts as a tumor suppressor. The encoded protein combines with other tumor suppressors, DNA damage sensors, and signal transducers to form a large multi-subunit protein complex known as BASC for BRCA1-associated genome surveillance complex."   
+ %>
+
+
+<h2><%= gene[:name] %></h2>
+
+  <ul id="gene-nav" class="center">
+    <li><a href="javascript:;" onclick="Effect.ScrollTo('general-info'); return false;">
+          Information
+        </a>
+    </li>
+    <li><a href="javascript:;" onclick="Effect.ScrollTo('related-cancer'); return false;">
+          Cancers
+        </a>
+    </li>    
+    <li><a href="javascript:;" onclick="Effect.ScrollTo('interactions'); return false;">
+          Interactions
+        </a>
+    </li>    
+    
+  </ul>
+  <div class="clearbox">
+    
+  </div>
+<div class="gene">
+  <h2 id="general-info">General Information</h2>
+  <div class="content">
+    <h3>Full name</h3>
+    <p><%= gene[:full] %></p>
+    <h3>Also known as</h3>
+    <p><%= gene[:aka] %></p>
+    <h3>Description</h3>
+    <p><%= gene[:summary] %></p>
+  </div>
+  <h2 id="related-cancer">Related Cancers</h2>
+  <div class="center">
+    <% %w(prostate lymphoma breast colon skin).each do |cancer| %>
+      <div class="cancer-box">
+        <%= link_to cancer %>
+      </div>
+    <% end  %>
+  </div>
+  <h2 id="interactions">Interactions</h2>
+</div>
