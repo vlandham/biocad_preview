@@ -15,10 +15,15 @@ color:
   alt:         "#666"
   green:       "#A7D285"
   blue:        "#D0E3F1"
+  red:         "#FF3418"
+  yellow:      "#F2EAD0"
 ---
 
 body {
   font-family: Verdana, "Bitstream Vera Sans", sans-serif;
+   background-image: url(/img/dna_search.gif);
+   background-repeat:no-repeat;
+   background-position: 255px -20px;
 }
 
 /* Headings
@@ -41,14 +46,39 @@ hr {
   color:      <%= @page.color['highlight'] %>;
 }
 
+.text-center {
+  text-align:center;
+}
+
+.gene h2 {
+  background-color: #D1D1D1;
+}
+
 /* Nav Bar
  * --------------------------------------------------------------------- */
-ul#nav {
-  list-style:none;
+#top-nav {
   position:absolute;
   left:580px;
   top:30px;
   height:32px;
+}
+
+#top-nav form.search_genes
+{
+  float:right;
+  text-align:right;
+  padding-right: 20px;
+  margin-top: 25px;
+}
+
+#top-nav input#q
+{
+  width: 160px;
+}
+ 
+ul#nav {
+  list-style:none;
+  
   margin:0;
   padding:0;
 }
@@ -91,6 +121,7 @@ ul#gene-nav li a {
   line-height:32px;
   height:32px;
   color:#777777;
+/*  background-color: <%= @page.color["yellow"]%>;*/
   text-decoration: none;
   padding:0 25px 0 20px;
 }
@@ -297,6 +328,10 @@ p.title {
   margin-bottom: 0.75em;
 }
 
-#header p.title { font-size: 3em; line-height: 1; height: 100px; border-bottom: 4px solid #dddddd;  }
+#header p.title { font-size: 3.2em; line-height: 1; 
+ 
+  height: 100px; 
+/*  border-bottom: 4px solid #dddddd;  */
+}
 
 /* EOF */

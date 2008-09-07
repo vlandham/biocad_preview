@@ -55,12 +55,16 @@ filter:
     <p><%= gene[:summary] %></p>
   </div>
   <h2 id="related-cancer">Related Cancers</h2>
+  <p>Here are cancers associated with this gene:</p>
   <div class="center">
     <% %w(prostate lymphoma breast colon skin).each do |cancer| %>
       <div class="cancer-box">
         <%= link_to cancer %>
       </div>
     <% end  %>
+  </div>
+  <div class="clearbox">
+    
   </div>
   <h2 id="interactions">Interactions</h2>
   <h3>Top Interactions</h3>

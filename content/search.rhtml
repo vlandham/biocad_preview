@@ -24,7 +24,12 @@ filter:
       <div class="label">
         Search by <strong>Cancer</strong>
       </div>
-      <input type="text" name="q" value="" class="text">
+      <!-- <input type="text" name="q" value="" class="text"> -->
+      <select type="text" name="q" value="" class="text">
+        <% %w(prostate lymphoma breast colon skin).each do |cancer| %>
+        <option value="<%= cancer %>"><%= cancer %></option>
+        <% end %>
+      </select>
       <input type="image" src="/img/search.png" alt="search" />
     </form>
   </div>
@@ -34,11 +39,18 @@ filter:
   
 </div>
 
-<h2>Popular cancer types</h2>
-<div class="center">
-<% %w(prostate lymphoma breast colon skin).each do |cancer| %>
-  <div class="cancer-box">
-    <%= link_to cancer %>
+<h2>How to use</h2>
+<p>KU BioCAD attempts to provide you with a powerful tool to assist in researching and analyzing oncogenes and other genes related to cancer.  You can navigate through this site in two general ways: through a search for a specific gene or by browsing genes known to be related to a particular cancer </p>
+
+<div class="container">
+  <div class="column span-9 append-1 first">
+    <h2 class="text-center">Gene Search</h2>
+    <p>Mauris pulvinar. Fusce auctor dolor vitae mi. Nullam odio. Pellentesque tempor blandit dui. Mauris quis purus a nisi porttitor vehicula. Praesent nisl metus, porttitor in, gravida placerat, molestie sit amet, justo. Aliquam convallis suscipit nisl. Nulla facilisi. Sed vulputate porta mi. Donec sapien ligula, consectetuer ac, porta sit amet, elementum ut, diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+
+   <p>Aliquam non neque eget ligula accumsan fermentum. Nulla facilisi. Cras viverra metus sed mi. Sed faucibus sapien nec dui. Mauris a est. Maecenas mollis facilisis purus. Sed porttitor nisl vel tellus. Nam tellus. Vivamus pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpi</p>
   </div>
-<% end  %>
+  <div class="column span-9 last">
+    <h2 class="text-center">Cancer Search</h2>
+    <p>Aliquam non neque eget ligula accumsan fermentum. Nulla facilisi. Cras viverra metus sed mi. Sed faucibus sapien nec dui. Mauris a est. Maecenas mollis facilisis purus. Sed porttitor nisl vel tellus. Nam tellus. Vivamus pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam eget mauris sed nisi congue lobortis. Praesent a tortor. Donec imperdiet sagittis magna. Vestibulum neque. Vivamus metus augue, porta ac, varius sed, aliquet at, felis. Donec ullamcorper. Mauris et purus at sem luctus faucibus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+  </div>
 </div>

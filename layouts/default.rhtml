@@ -41,6 +41,9 @@ filter:    erb
    <div class="column span-20 prepend-2 append-2 first last" id="header">
      <p class="title">KU BioCAD</p>
    </div>
+   <div id="top-nav">
+    
+   
   <ul id="nav">
     <li><%= link_to "Home", 'search.html' %></li>
     <li><%= link_to "About" %></li>
@@ -48,6 +51,11 @@ filter:    erb
     <li><%= link_to "Cancers" %></li>
     <li><%= link_to "Admin" %></li>
   </ul>
+      <form action="/search" class="search_genes" method="get">
+        <input id="q" name="q" size="18" type="search" /> 
+        <input type="submit" value="Search Genes" />
+      </form>
+  </div>
 
    <div class="column span-20 prepend-2 append-2 first last">
       <%= @content %>
