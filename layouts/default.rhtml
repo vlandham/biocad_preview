@@ -21,8 +21,13 @@ filter:    erb
    <!-- Homepage CSS -->
    <link rel="stylesheet" href="/css/site.css" type="text/css" media="screen, projection" />
    
+   <link rel="stylesheet" href="css/tooltips.css" type="text/css" 
+    media="screen" />
+   
    <script type="text/javascript" src="/script/prototype.js"></script>
    <script type="text/javascript" src="/script/scriptaculous.js"></script>
+ 
+   
    
    <script type="text/javascript" src="/script/niftycube.js"></script>
    
@@ -30,6 +35,7 @@ filter:    erb
    window.onload=function(){
    Nifty("div.search,div.cancer-box a,div.cancer-box a:hover,div.gene-box a,div.gene-box a:hover","big");
    }
+   
    
    </script>
    
@@ -49,7 +55,7 @@ filter:    erb
     <li><%= link_to "About" %></li>
     <li><%= link_to "Genes", 'gene.html' %></li>
     <li><%= link_to "Cancers" %></li>
-    <li><%= link_to "Admin" %></li>
+    <li><%= link_to "Admin", 'admin.html' %></li>
   </ul>
       <form action="/search" class="search_genes" method="get">
         <input id="q" name="q" size="18" type="search" /> 
