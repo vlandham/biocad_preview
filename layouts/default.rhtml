@@ -8,7 +8,7 @@ filter:    erb
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-   <title><%= @page.title %></title>
+   <title>BioCAD - <%= @page.title %></title>
    <meta name="author" content="<%= @page.author %>" />
 
    <!--- Blueprint CSS Framework -->
@@ -52,7 +52,7 @@ filter:    erb
    
   <ul id="nav">
     <li><%= link_to "Home", 'search.html' %></li>
-    <li><%= link_to "About" %></li>
+    <li><%= link_to "About", 'about.html' %></li>
     <li><%= link_to "Genes", 'gene.html' %></li>
     <li><%= link_to "Cancers" %></li>
     <li><%= link_to "Admin", 'admin.html' %></li>
