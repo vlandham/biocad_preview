@@ -27,7 +27,7 @@ body {
 }
 
 #main {
-  background-image: url(/img/dna2.gif);
+  background-image: url(/img/dna4.gif);
    
    background-repeat:no-repeat;
    background-position: 170px -25px;
@@ -113,11 +113,17 @@ ul#nav li a {
   padding:0 25px 0 20px;
 }
 ul#nav li a:hover {
-  background-color:#dcdcdc;
+/*  background-color:#dcdcdc;*/
+  color: <%= @page.color["red"]%>;
 }
 
 
 /*----*/
+
+#gene-name {
+   border-left: 6px solid <%= @page.color["red"]%>; 
+   padding-left:5px;
+}
 
 ul#gene-nav {
    list-style:none;
@@ -139,6 +145,10 @@ ul#gene-nav li a {
 /*  background-color: <%= @page.color["yellow"]%>;*/
   text-decoration: none;
   padding:0 25px 0 20px;
+}
+
+ul#gene-nav li a:hover {
+  color: <%= @page.color["red"]%>;
 }
 
 .clearbox {
@@ -349,4 +359,8 @@ p.title {
 /*  border-bottom: 4px solid #dddddd;  */
 }
 
+#footer {
+  height:40px;
+  border-bottom:6px solid #595959;
+}
 /* EOF */

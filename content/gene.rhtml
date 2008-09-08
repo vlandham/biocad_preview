@@ -12,8 +12,8 @@ filter:
    gene[:summary] = "This gene encodes a nuclear phosphoprotein that plays a role in maintaining genomic stability and acts as a tumor suppressor. The encoded protein combines with other tumor suppressors, DNA damage sensors, and signal transducers to form a large multi-subunit protein complex known as BASC for BRCA1-associated genome surveillance complex."   
  %>
 
+<h2 id="gene-name"><%= gene[:name] %></h2>
 
-<h2><%= gene[:name] %></h2>
 
   <ul id="gene-nav" class="center">
     <li><a href="javascript:;" onclick="Effect.ScrollTo('general-info'); return false;">
@@ -41,6 +41,8 @@ filter:
         </a>
     </li>
   </ul>
+
+  
   <div class="clearbox">
     
   </div>
@@ -132,4 +134,8 @@ filter:
       <img src="/img/file_search_big.png" />
     </div>
   </div>
+  <div class="clearbox">
+    
+  </div>
+  <h2 id="transcriptions">Transcription Factors</h2>
 </div>
