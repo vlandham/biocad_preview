@@ -55,7 +55,6 @@ filter:
     <p><%= gene[:summary] %></p>
   </div>
   <h2 id="related-cancer">Related Cancers</h2>
-  <p>Here are cancers associated with this gene:</p>
   <div class="center">
     <% %w(prostate lymphoma breast colon skin).each do |cancer| %>
       <div class="cancer-box">
@@ -76,7 +75,10 @@ filter:
   <div class="clearbox">
     
   </div>
-  <h3>Interaction Map</h3>
+  <h3>Map</h3>
+  <div class="center">
+    <img src="/img/gene_network.png" />
+  </div>
   <div class="clearbox">
     
   </div>
@@ -96,7 +98,8 @@ filter:
   <h3>Map</h3>
   <div class="center">
     <div id="path-map">
-      <iframe src="http://www.maplib.net/fullmap.php?id=2386&lat=-52.75541210602274&lng=35.775604248046875&z=10" scrolling="no" frameborder="0" style="width:400px;height:400px;border:0px"></iframe>
+      <!-- <iframe src="http://www.maplib.net/fullmap.php?id=2386&lat=-52.75541210602274&lng=35.775604248046875&z=10" scrolling="no" frameborder="0" style="width:400px;height:400px;border:0px"></iframe> -->
+      <img src="/img/map.png" />
     </div>
   </div>
   <div class="clearbox">
@@ -104,5 +107,29 @@ filter:
   </div>
   <h2 id="microarray">Microarrays</h2>
   <h3>Statistics</h3>
+  <div class="center">
+    <img src="/img/stats.png" />
+  </div>
+  <div class="clearbox">
+    
+  </div>
   <h3>Downloads</h3>
+  <div class="column span-6 append-1 first">
+    <h3 class="text-center">Raw Data</h3>
+    <div class="center">
+      <img src="/img/file_big.png" />
+    </div>
+  </div>
+  <div class="column span-6 append-1">
+    <h3 class="text-center">Processed Data</h3>
+    <div class="center">
+      <img src="/img/file_edit_big.png" />
+    </div>
+  </div>
+  <div class="column span-6 last">
+    <h3 class="text-center">Selected Files</h3>
+    <div class="center">
+      <img src="/img/file_search_big.png" />
+    </div>
+  </div>
 </div>
